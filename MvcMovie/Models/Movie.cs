@@ -1,8 +1,16 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MvcMovie.Models
 {
+    public class MovieGenreViewModel
+    {
+        public List<Movie> movies;
+        public SelectList genres;
+        public string movieGenre { get; set; }
+    }
     public class Movie
     {
         public int ID { get; set; }
